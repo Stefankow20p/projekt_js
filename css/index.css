@@ -12,6 +12,7 @@ article {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 article img {
     transition-duration: 1s;
@@ -21,4 +22,7 @@ article img {
 article img:hover {
     transform: scale(110%);
     transition-duration: 1s;
+}
+article p {
+    margin: 10px;
 }
