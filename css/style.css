@@ -3,8 +3,8 @@ header a {
     text-decoration: none;
 }
 header {
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     background-color: yellow;
     box-shadow: 1px 1px 4px RGBA(0, 0, 0, 0.1);
     position: fixed;
@@ -93,10 +93,56 @@ header .menu-btn {
         display: none;
     }
 }
-
-body {
-    background-color: red;
+html {
     height: 100%;
+    min-height: 100%;
+}
+body {
+    background-color: green;
+    height: 100%;
+    min-height: 100%;
     padding-bottom: 0px;
     margin-bottom: 0px;
+}
+footer {
+    background-color: pink;
+    position: relative;
+    text-align: center;
+
+    bottom: 0;
+    left: -20px;
+    width: 105%;
+    height: 30px;
+}
+main {
+    border: black 2px solid;
+    width: 68%;
+    display: inline-block;
+}
+aside:nth-child(1) {
+    width: 10%;
+}
+aside:nth-child(3) {
+    width: 20%;
+}
+aside {
+    border: black 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+aside div {
+    border: black 1px solid;
+    width: 210px;
+    height: 410px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#page {
+    border: black 2px solid;
+    margin-top: 65px;
+    display: flex;
+    align-items: center;
 }
