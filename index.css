@@ -1,0 +1,44 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+article {
+    background-color: rgb(231, 231, 231);
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+article img {
+    transition-duration: 1s;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+article img:hover {
+    transform: scale(110%);
+    transition-duration: 1s;
+}
+
+article p {
+    margin: 10px;
+}
+
+article h2 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media (max-width: 980px) {
+    article img {
+        width: 80%;
+    }
+}
