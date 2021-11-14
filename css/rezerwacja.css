@@ -1,0 +1,18 @@
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+main section:nth-child(1) {
+    margin: 20px;
+}
+main section:nth-child(1) img {
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+@media (max-width: 820px) {
+    main section:nth-child(1) img {
+        width: 350px;
+        height: 350px;
+    }
+}
