@@ -44,11 +44,33 @@
                     </ul>
                     <hr />
                     <ul>
-                        <li>Cena za dobe:</li>
+                        <li>Cena za dobę:</li>
                         <li>0</li>
                     </ul>
                     <hr />
-                    <form></form>
+                    <form action="zaplacono.html" method="post">
+                        <fieldset>
+                            <legend>Czas</legend>
+                            <legend>Data przyjazdu: <input type="date" name="przyjazd" /></legend>
+                            <legend>Data odjazdu: <input type="date" name="odjazd" /></legend>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Dodatkowe udogodnienia</legend>
+                            <legend><input type="checkbox" name="internet" /> Internet 20 PLN</legend>
+                            <legend><input type="checkbox" name="sprzatanie" /> Sprzątanie 50 PLN</legend>
+                            <legend><input type="checkbox" name="pralnia" /> Dostęp do pralni 10 PLN</legend>
+                            <legend><input type="checkbox" name="sniadanie" /> Śniadanie 15 PLN/osoba</legend>
+                            <legend><input type="checkbox" name="obiadokolacja" /> Obiadokolacja 25 PLN/osoba</legend>
+                        </fieldset>
+                        <hr />
+                        <ul>
+                            <li>Łączny koszt:</li>
+                            <li>0</li>
+                        </ul>
+                        <hr />
+                        <input type="submit" value="Płatność" />
+                    </form>
                 </article>
                 <article></article>
             </section>
