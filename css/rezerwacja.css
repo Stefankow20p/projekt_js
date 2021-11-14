@@ -2,6 +2,7 @@ main {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    align-items: center;
 }
 main section:nth-child(1) {
     margin: 20px;
@@ -21,19 +22,26 @@ main section:nth-child(1) img {
 main section:nth-child(2) {
     display: flex;
     flex-flow: column nowrap;
+    margin: 20px;
 }
 
-main section:nth-child(2) div:nth-child(1) {
+main section:nth-child(2) article:nth-child(1) {
     background-color: rgb(49, 82, 170);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     height: 20px;
     width: 100%;
 }
-main section:nth-child(2) div:nth-child(3) {
+main section:nth-child(2) article:nth-child(3) {
     background-color: rgb(49, 82, 170);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     height: 20px;
     width: 100%;
+}
+main section:nth-child(2) article:nth-child(2) {
+    background-color: #c4c4c4;
+}
+main section:nth-child(2) article:nth-child(2) hr {
+    border: 2px solid rgb(99, 140, 255);
 }
