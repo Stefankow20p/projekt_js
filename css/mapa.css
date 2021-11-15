@@ -134,4 +134,10 @@ main section:nth-child(2) article:nth-child(2) li {
     display: block;
     width: 300px;
     text-align: center;
+    font-family: "Trebuchet MS", sans-serif;
+    margin-top: 10px;
+}
+main section:nth-child(2) article:nth-child(2) h2 {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 800;
 }
