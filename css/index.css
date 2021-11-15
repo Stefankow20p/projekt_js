@@ -1,0 +1,17 @@
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    align-items: center;
+}
+article {
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
