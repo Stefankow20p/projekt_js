@@ -1,4 +1,30 @@
-main{
+main {
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: center;
+
+}
+
+main input {
+    min-width: 50%;
+    min-height: 30%;
+    font-size: clamp(1rem, -0.875rem + 8.333333vw, 3.5rem);
+    border-radius: 30px;
+    padding: 10px;
+    margin: 10px;
+}
+
+main ol {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+main li {
+    min-width: 40%;
+    min-height: 10%;
+    font-size: clamp(1rem, -0.875rem + 8.333333vw, 2.5rem);
+    list-style-type: none;
 }
