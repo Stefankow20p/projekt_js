@@ -26,7 +26,7 @@ main section:nth-child(1) label {
     filter: blur(15px);
 }
 main section:nth-child(1) label:hover {
-    opacity: 0.5;
+    opacity: 0.7;
 }
 main section:nth-child(1) label:nth-child(1) {
     margin-top: 614px;
