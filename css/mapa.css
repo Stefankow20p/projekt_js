@@ -141,3 +141,6 @@ main section:nth-child(2) article:nth-child(2) h2 {
     font-family: "Courier New", Courier, monospace;
     font-weight: 800;
 }
+main section:nth-child(2) article:nth-child(2) li img {
+    border-radius: 10px;
+}
