@@ -55,7 +55,22 @@
                 <article></article>
                 <article>
                     <ul>
-                        <li>#galeria#</li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
                         <li>0</li>
                     </ul>
                     <hr />
@@ -104,24 +119,7 @@
                 <li><strong>Email: </strong>domki.letniskowe@gmail.com</li>
             </ol>
         </footer>
-        <!-- <script scr="javascript\choosing.js"></script> -->
-        <script>
-            const radios = document.querySelector("main").querySelector("section:nth-child(1)").querySelectorAll("input");
-            function akt_form(numer_domu) {
-                document.querySelector("main").querySelector("section:nth-child(2)").querySelectorAll("li")[1].innerHTML = "Nr: " + numer_domu;
-            }
-            function change_value(item) {
-                const inp = document.querySelector("main").querySelector("section:nth-child(2)").querySelector('input[type="text"]');
-                inp.value = item.slice(3, 5);
-                akt_form(item.slice(3, 5));
-            }
-            for (i = 0; i < radios.length; i++) {
-                radios[i].addEventListener("change", function () {
-                    change_value(this.id);
-                });
-            }
-
-            document.querySelector("main").querySelector("section:nth-child(2)").querySelector('input[type="text"]').value = 1;
-        </script>
+        <script src="javascript/choosing.js"></script>
+        <script src="javascript/slideshow.js"></script>
     </body>
 </html>
