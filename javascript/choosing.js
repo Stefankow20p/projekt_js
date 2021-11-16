@@ -19,5 +19,5 @@ document.querySelector("main").querySelector("section:nth-child(2)").querySelect
 for (i = 0; i < 16; i++) {
     lis[i].style.display = "none";
 }
-lis[1].style.display = "block";
+lis[0].style.display = "block";
 lis[16].innerHTML = "Nr: 1";
