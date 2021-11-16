@@ -44,7 +44,7 @@ class Zdjecia {
             let temp = this;
             this.interval = setInterval(function () {
                 temp.change_slide();
-            }, 2000);
+            }, 3000);
         } else {
             clearInterval(this.interval);
             this.interval = 0;
