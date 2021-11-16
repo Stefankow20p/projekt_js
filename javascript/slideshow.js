@@ -281,5 +281,6 @@ if (document.title == "Mapa") {
     document.querySelector("#dom16").addEventListener("change", function () {
         g15.turn_on();
     });
+    g0.turn_on();
     //0-15
 }
