@@ -274,3 +274,7 @@ main section:nth-child(2) article:nth-child(2) li {
 main section:nth-child(2) article:nth-child(2) fieldset {
     border: 2px solid rgb(99, 140, 255);
 }
+main section:nth-child(2) article:nth-child(2) img {
+    margin: 20px;
+    border-radius: 10px;
+}
