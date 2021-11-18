@@ -6,6 +6,8 @@ let connection_base = mysql.createConnection({
     database: "baza_osrodek",
 });
 
+const http = require("http");
+
 connection_base.connect(function (err) {
     if (err) throw err;
     connection_base.query("SELECT * FROM pokoje", function (err, result) {
