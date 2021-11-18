@@ -1,3 +1,5 @@
+const check_if_avaible = require("./check_if_avaible.js")
+
 const mysql = require("mysql");
 let connection_base = mysql.createConnection({
     host: "localhost",
@@ -8,11 +10,5 @@ let connection_base = mysql.createConnection({
 
 const http = require("http");
 
-connection_base.connect(function (err) {
-    if (err) throw err;
-    connection_base.query("SELECT * FROM pokoje", function (err, result) {
-        if (err) throw err;
-        console.log(result);
-    });
-});
+
 connection_base.end();
