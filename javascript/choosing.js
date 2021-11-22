@@ -1,7 +1,7 @@
 const radios = document.querySelector("main").querySelector("section:nth-child(1)").querySelectorAll("input");
 const lis = document.querySelector("main").querySelector("section:nth-child(2)").querySelectorAll("li");
 function change_value(item) {
-    const inp = document.querySelector("main").querySelector("section:nth-child(2)").querySelector('input[type="text"]');
+    const inp = document.querySelector("main").querySelector("section:nth-child(2)").querySelector('input[type="hidden"]');
     inp.value = item.slice(3, 5);
     document.querySelector("main").querySelector("section:nth-child(2)").querySelectorAll("li")[16].innerHTML = "Nr: " + item.slice(3, 5);
     for (i = 0; i < 16; i++) {
@@ -15,7 +15,7 @@ for (i = 0; i < radios.length; i++) {
     });
 }
 
-document.querySelector("main").querySelector("section:nth-child(2)").querySelector('input[type="text"]').value = 1;
+document.querySelector("main").querySelector("section:nth-child(2)").querySelector('input[type="hidden"]').value = 1;
 for (i = 0; i < 16; i++) {
     lis[i].style.display = "none";
 }
