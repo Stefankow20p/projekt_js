@@ -86,8 +86,8 @@
                     <form action="zaplacono.html" method="post">
                         <fieldset>
                             <legend>Czas</legend>
-                            <legend>Data przyjazdu: <input type="date" name="przyjazd" required="required" /></legend>
-                            <legend>Data odjazdu: <input type="date" name="odjazd" required="required" /></legend>
+                            <legend>Data przyjazdu: <input type="date" name="przyjazd" required="required" value="2022-01-01" /></legend>
+                            <legend>Data odjazdu: <input type="date" name="odjazd" required="required" value="2022-01-01" /></legend>
                         </fieldset>
 
                         <fieldset>
@@ -106,7 +106,8 @@
 
                         <hr />
                         <input type="hidden" name="nr_domu" />
-                        <input type="submit" value="Płatność" />
+                        <input type="button" value="Płatność" />
+                        <p>Komunikat</p>
                     </form>
                 </article>
                 <article></article>
@@ -122,10 +123,47 @@
         <script src="javascript/choosing.js"></script>
         <script src="javascript/slideshow.js"></script>
         <script>
-            console.log(document.querySelectorAll('input[type="date"]')[0].value);
             function czy_wolne() {
-                //sprawdza czy daty sa uzupelnione, czy przyjazd jest pozniej niz wyjazd, jak ok to wysyla zapytanie na serv czy domek jest wtedy wolny
+                //sprawdza czy daty sa przyszle, czy przyjazd jest wczesniej niz wyjazd, jak ok to wysyla zapytanie na serv czy domek jest wtedy wolny
+                const dates = document.querySelectorAll('input[type="date"]');
+                const subm = document.querySelectorAll("input")[document.querySelectorAll("input").length - 1]; //przycisk submit
+                const p_komunikat = document.querySelectorAll("p")[document.querySelectorAll("p").length - 1]; // komunikat bledu
+                if (dates[0].value <= new Date()) {
+                    subm.type = "button";
+                    p_komunikat.innerHTML = "Nieprawidłowy zakres dat.";
+                    console.log("a");
+                } else if (dates[0].value >= dates[1].value) {
+                    subm.type = "button";
+                    p_komunikat.innerHTML = "Nieprawidłowy zakres dat.";
+                    console.log("b");
+                } else {
+                    let res = true;
+                    // fetch("/", {
+                    //     method: "POST",
+                    //     headers: {
+                    //         "Content-Type": "application/json",
+                    //     },
+                    //     body: JSON.stringify({
+                    //         user: {
+                    //             name: "John",
+                    //             email: "john@example.com",
+                    //         },
+                    //     }),
+                    // });
+                    if (res) {
+                        subm.type = "button";
+                        p_komunikat.innerHTML = "Domek jest w tym momencie zajęty.";
+                        console.log("c");
+                    } else {
+                        subm.type = "submit";
+                        p_komunikat.innerHTML = "";
+                        console.log("d");
+                    }
+                }
             }
+            czy_wolne();
+            document.querySelectorAll('input[type="date"]')[0].addEventListener("change", czy_wolne);
+            document.querySelectorAll('input[type="date"]')[1].addEventListener("change", czy_wolne);
         </script>
     </body>
 </html>
