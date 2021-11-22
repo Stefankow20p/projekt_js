@@ -1,4 +1,4 @@
-const check_if_avaible = require("./check_if_avaible.js")
+//const check_if_avaible = require("./check_if_avaible.js")
 
 const mysql = require("mysql");
 let connection_base = mysql.createConnection({
@@ -9,6 +9,5 @@ let connection_base = mysql.createConnection({
 });
 
 const http = require("http");
-
 
 connection_base.end();
