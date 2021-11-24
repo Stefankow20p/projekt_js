@@ -38,3 +38,6 @@ async function czy_wolne() {
 czy_wolne();
 document.querySelectorAll('input[type="date"]')[0].addEventListener("change", czy_wolne);
 document.querySelectorAll('input[type="date"]')[1].addEventListener("change", czy_wolne);
+for (i = 0; i < radios.length; i++) {
+    radios[i].addEventListener("change", czy_wolne);
+}

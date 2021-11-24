@@ -28,7 +28,7 @@ async function check_if_empty(data1, data2, pokoj) {
     const zapytanie = `SELECT * FROM wynajecia WHERE ((${data1} BETWEEN przyjazd AND dzien_przed_wyjazdem) OR (${data2} BETWEEN przyjazd AND dzien_przed_wyjazdem) OR (${data1}< przyjazd AND ${data2}>dzien_przed_wyjazdem)) AND pokoj = ${pokoj}`;
     console.log("pyk");
 
-    SelectAllElements = () => {
+    get_data = () => {
         return new Promise((resolve, reject) => {
             pool_base.query(zapytanie, (error, result) => {
                 if (error) {
@@ -39,7 +39,7 @@ async function check_if_empty(data1, data2, pokoj) {
                     console.log("miejsce wolne");
                     result = true;
                 } else {
-                    console.log(" nie miejsce wolne");
+                    console.log("nie miejsce wolne");
                     result = false;
                 }
                 return resolve(result);
@@ -47,7 +47,7 @@ async function check_if_empty(data1, data2, pokoj) {
         });
     };
     console.log("cos");
-    let cos = await SelectAllElements();
+    let cos = await get_data();
     console.log(cos);
     console.log("koniec check if");
     return cos;
