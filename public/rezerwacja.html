@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="keywords" name="jezioro, wczasy, domeki letniskowe, wynajem, domek nad jeziorem" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Witamy w najpiękniejszym ośrodku wypoczynkowym na mazurach! Świetna lokalizacja, kontakt z naturą, moc atrakcji i przytulny domek. Nigdzie nie wypoczniesz tak jak u nas."
+        />
+        <meta name="robots" content="none" />
+        <meta name="author" content="Piotr Stefanków" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/rezerwacja.css" />
+        <title>Rezerwacja</title>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo" /> </a>
+                <input type="checkbox" class="menu-btn" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn">
+                    <span class="navicon"></span>
+                </label>
+
+                <ol class="menu">
+                    <li><a href="index.html">Aktualności</a></li>
+                    <li><a href="rezerwacja.html">Rezerwacje</a></li>
+                    <li><a href="mapa.html">Mapa ośrodka</a></li>
+                </ol>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <label for="dom1"><input type="radio" name="domek" id="dom1" checked="checked" /></label>
+                <label for="dom2"><input type="radio" name="domek" id="dom2" /></label
+                ><label for="dom3"><input type="radio" name="domek" id="dom3" /></label
+                ><label for="dom4"><input type="radio" name="domek" id="dom4" /></label
+                ><label for="dom5"><input type="radio" name="domek" id="dom5" /></label
+                ><label for="dom6"><input type="radio" name="domek" id="dom6" /></label
+                ><label for="dom7"><input type="radio" name="domek" id="dom7" /></label
+                ><label for="dom8"><input type="radio" name="domek" id="dom8" /></label
+                ><label for="dom9"><input type="radio" name="domek" id="dom9" /></label
+                ><label for="dom10"><input type="radio" name="domek" id="dom10" /></label
+                ><label for="dom11"><input type="radio" name="domek" id="dom11" /></label
+                ><label for="dom12"><input type="radio" name="domek" id="dom12" /></label
+                ><label for="dom13"><input type="radio" name="domek" id="dom13" /></label
+                ><label for="dom14"><input type="radio" name="domek" id="dom14" /></label
+                ><label for="dom15"><input type="radio" name="domek" id="dom15" /></label
+                ><label for="dom16"><input type="radio" name="domek" id="dom16" /></label>
+                <img src="img/mapa.svg" alt="Mapa ośrodka" />
+            </section>
+            <section>
+                <article></article>
+                <article>
+                    <ul>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li><img src="#" alt="#" /></li>
+                        <li>0</li>
+                    </ul>
+                    <hr />
+                    <ul>
+                        <li>Cena za dobę:</li>
+                        <li>0</li>
+                    </ul>
+                    <ul>
+                        <li>Ilość osób:</li>
+                        <li>0</li>
+                    </ul>
+                    <hr />
+                    <form action="zaplacono.html" method="post">
+                        <fieldset>
+                            <legend>Czas</legend>
+                            <legend>Data przyjazdu: <input type="date" name="przyjazd" required="required" value="2022-01-01" /></legend>
+                            <legend>Data odjazdu: <input type="date" name="odjazd" required="required" value="2022-01-01" /></legend>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Dodatkowe udogodnienia</legend>
+                            <legend><input type="checkbox" name="internet" /> Internet 20 PLN</legend>
+                            <legend><input type="checkbox" name="sprzatanie" /> Sprzątanie 50 PLN</legend>
+                            <legend><input type="checkbox" name="pralnia" /> Dostęp do pralni 10 PLN</legend>
+                            <legend><input type="checkbox" name="sniadanie" /> Śniadanie 15 PLN/osoba</legend>
+                            <legend><input type="checkbox" name="obiadokolacja" /> Obiadokolacja 25 PLN/osoba</legend>
+                        </fieldset>
+                        <hr />
+                        <ul>
+                            <li>Łączny koszt:</li>
+                            <li>0</li>
+                        </ul>
+
+                        <hr />
+                        <input type="hidden" name="nr_domu" />
+                        <input type="button" value="Płatność" />
+                        <p>Komunikat</p>
+                    </form>
+                </article>
+                <article></article>
+            </section>
+        </main>
+        <footer>
+            <ol>
+                <li><strong>Numer telefonu: </strong> +850 000 000 000</li>
+                <li><strong>Adres: </strong>Słowackiego 1, 12-200 Piszczynówka</li>
+                <li><strong>Email: </strong>domki.letniskowe@gmail.com</li>
+            </ol>
+        </footer>
+        <script src="javascript/choosing.js"></script>
+        <script src="javascript/slideshow.js"></script>
+        <script>
+            function czy_wolne() {
+                //sprawdza czy daty sa przyszle, czy przyjazd jest wczesniej niz wyjazd, jak ok to wysyla zapytanie na serv czy domek jest wtedy wolny
+                const dates = document.querySelectorAll('input[type="date"]');
+                const subm = document.querySelectorAll("input")[document.querySelectorAll("input").length - 1]; //przycisk submit
+                const p_komunikat = document.querySelectorAll("p")[document.querySelectorAll("p").length - 1]; // komunikat bledu
+                if (dates[0].value <= new Date()) {
+                    subm.type = "button";
+                    p_komunikat.innerHTML = "Nieprawidłowy zakres dat.";
+                    console.log("a");
+                } else if (dates[0].value >= dates[1].value) {
+                    subm.type = "button";
+                    p_komunikat.innerHTML = "Nieprawidłowy zakres dat.";
+                    console.log("b");
+                } else {
+                    let res = true;
+                    // fetch("/", {
+                    //     method: "POST",
+                    //     headers: {
+                    //         "Content-Type": "application/json",
+                    //     },
+                    //     body: JSON.stringify({
+                    //         user: {
+                    //             name: "John",
+                    //             email: "john@example.com",
+                    //         },
+                    //     }),
+                    // });
+                    if (res) {
+                        subm.type = "button";
+                        p_komunikat.innerHTML = "Domek jest w tym momencie zajęty.";
+                        console.log("c");
+                    } else {
+                        subm.type = "submit";
+                        p_komunikat.innerHTML = "";
+                        console.log("d");
+                    }
+                }
+            }
+            czy_wolne();
+            document.querySelectorAll('input[type="date"]')[0].addEventListener("change", czy_wolne);
+            document.querySelectorAll('input[type="date"]')[1].addEventListener("change", czy_wolne);
+        </script>
+    </body>
+</html>

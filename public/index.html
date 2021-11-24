@@ -1,24 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="keywords" name="jezioro, wczasy, domeki letniskowe, wynajem, domek nad jeziorem" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <meta
+            name="description"
+            content="Witamy w najpiękniejszym ośrodku wypoczynkowym na mazurach! Świetna lokalizacja, kontakt z naturą, moc atrakcji i przytulny domek. Nigdzie nie wypoczniesz tak jak u nas."
+        />
+        <meta name="robots" content="none" />
+        <meta name="author" content="Piotr Stefanków" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/index.css" />
+        <title>Strona główna</title>
     </head>
+
     <body>
-        <h1>Strona</h1>
-        <script>
-            let num1 = 2;
-            const data = { num1 };
-            const options = {
-                method: "POST",
-                body: JSON.stringify(data),
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            };
-            fetch("api/", options);
-        </script>
+        <header>
+            <nav>
+                <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo" /> </a>
+                <input type="checkbox" class="menu-btn" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn">
+                    <span class="navicon"></span>
+                </label>
+
+                <ol class="menu">
+                    <li><a href="index.html">Aktualności</a></li>
+                    <li><a href="rezerwacja.html">Rezerwacje</a></li>
+                    <li><a href="mapa.html">Mapa ośrodka</a></li>
+                </ol>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <h2>Święto Niepodległości</h2>
+                <img src="img/articles/artykul4.jpg" alt="zdjęcie przedstawiające flage Polski" />
+                <p>
+                    Z okazji Święta Niepodległości zapraszamy wszystkich na rodzinny piknik który odbędzie się 11 listopada o godz. 16.00 na plaży
+                    niedaleko budki z lodami. Gościom naszego ośrodka przysługuje darmowa kiełbasa z grilla.
+                </p>
+            </article>
+            <article>
+                <h2>Halloween</h2>
+                <img src="img/articles/artykul1.jpg" alt="zdjęcie przedstawiające trzy dynie" />
+                <p>Z zaszczytem informujemy że na terenie naszego ośrodka obowiązuje całkowity zakaz obchodzenia Halloween.</p>
+            </article>
+            <article>
+                <h2>Dzień Nauczyciela</h2>
+                <img src="img/articles/artykul2.jpg" alt="zdjęcie przedstawiające dwie otwarte książki" />
+                <p>
+                    Aby uhonorować ciężką pracę jaką wykonują nauczyciele w kształceniu nowego pokolenia w dniach 16-17.10.2021 obowiązuje 40% zniżki
+                    na wynajem wszystkich pokoi.
+                </p>
+            </article>
+            <article>
+                <h2>Dzień Chłopaka, Dzień Dziewczyn</h2>
+                <img src="img/articles/artykul5.jpg" alt="zdjęcie przedstawiające dwójkę ludzi trzymających się za ręce" />
+                <p>
+                    Dzień Chłopaka/Dziewczyn to idealna okazja na wypad nad jezioro tylko we dwoje. Z tej okazji w dniach 2, 3, 9 i 10 października
+                    2021 roku obowiązuje 30% zniżki na pokoje 2-osobowe.
+                </p>
+            </article>
+            <article>
+                <h2>Koniec sezonu wakacyjnego</h2>
+                <img src="img/articles/artykul3.jpg" alt="zdjęcie przedstawiające zachód słońca na plaży" />
+                <p>
+                    Niestety skończył się już czas beztroskiej sielanki, a rozpoczął obowiązek szkolny. Dla uczniów będzie to wiele wyzwań i
+                    nieprzespanych nocy, dla rodziców wiele stresu wynikającego z troski o swoje pociechy, a dla właścicieli tego ośrodka czas
+                    zaciskania pasa po nieudanym sezonie. Byle do czerwca!
+                </p>
+            </article>
+            <article>
+                <h2>Międzynarodowy Dzień Słonia</h2>
+                <img src="img/articles/artykul6.jpg" alt="zdjęcie przedstawiające słonia" />
+                <p>
+                    Jak co roku 12 sierpnia w naszym ośrodku obchodzimy Dzień Słonia. Słonie to bardzo potężne i inteligentne zwierzęta. Zupełnie tak
+                    jak Jan Paweł II. Z tej okazji zapraszamy wszystkich o godz. 13.00 na świetlice w celu wspólnego pomodlenia się do Ojca Świętego z
+                    intencją ochrony zagrożonych gatunków.
+                </p>
+            </article>
+        </main>
+        <footer>
+            <ol>
+                <li><strong>Numer telefonu: </strong> +850 000 000 000</li>
+                <li><strong>Adres: </strong>Słowackiego 1, 12-200 Piszczynówka</li>
+                <li><strong>Email: </strong>domki.letniskowe@gmail.com</li>
+            </ol>
+        </footer>
     </body>
 </html>
