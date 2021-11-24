@@ -137,20 +137,21 @@
                     p_komunikat.innerHTML = "Nieprawidłowy zakres dat.";
                     console.log("b");
                 } else {
-                    let res = true;
-                    // fetch("/", {
-                    //     method: "POST",
-                    //     headers: {
-                    //         "Content-Type": "application/json",
-                    //     },
-                    //     body: JSON.stringify({
-                    //         user: {
-                    //             name: "John",
-                    //             email: "john@example.com",
-                    //         },
-                    //     }),
-                    // });
-                    if (res) {
+                    let res = false;
+                    let data1 = document.querySelector("main").querySelectorAll('input[type="date"]')[0].value;
+                    let data2 = document.querySelector("main").querySelectorAll('input[type="date"]')[1].value;
+                    let number = document.querySelector("main").querySelector('input[type="hidden"]').value;
+                    const data = { data1, data2, number };
+                    const options = {
+                        method: "POST",
+                        body: JSON.stringify(data),
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                    };
+                    fetch("api/check", options);
+
+                    if (res == false) {
                         subm.type = "button";
                         p_komunikat.innerHTML = "Domek jest w tym momencie zajęty.";
                         console.log("c");
