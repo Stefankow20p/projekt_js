@@ -122,49 +122,6 @@
         </footer>
         <script src="javascript/choosing.js"></script>
         <script src="javascript/slideshow.js"></script>
-        <script>
-            function czy_wolne() {
-                //sprawdza czy daty sa przyszle, czy przyjazd jest wczesniej niz wyjazd, jak ok to wysyla zapytanie na serv czy domek jest wtedy wolny
-                const dates = document.querySelectorAll('input[type="date"]');
-                const subm = document.querySelectorAll("input")[document.querySelectorAll("input").length - 1]; //przycisk submit
-                const p_komunikat = document.querySelectorAll("p")[document.querySelectorAll("p").length - 1]; // komunikat bledu
-                if (dates[0].value <= new Date()) {
-                    subm.type = "button";
-                    p_komunikat.innerHTML = "Nieprawidłowy zakres dat.";
-                    console.log("a");
-                } else if (dates[0].value >= dates[1].value) {
-                    subm.type = "button";
-                    p_komunikat.innerHTML = "Nieprawidłowy zakres dat.";
-                    console.log("b");
-                } else {
-                    let res = false;
-                    let data1 = document.querySelector("main").querySelectorAll('input[type="date"]')[0].value;
-                    let data2 = document.querySelector("main").querySelectorAll('input[type="date"]')[1].value;
-                    let number = document.querySelector("main").querySelector('input[type="hidden"]').value;
-                    const data = { data1, data2, number };
-                    const options = {
-                        method: "POST",
-                        body: JSON.stringify(data),
-                        headers: {
-                            "Content-Type": "application/json",
-                        },
-                    };
-                    fetch("api/check", options);
-
-                    if (res == false) {
-                        subm.type = "button";
-                        p_komunikat.innerHTML = "Domek jest w tym momencie zajęty.";
-                        console.log("c");
-                    } else {
-                        subm.type = "submit";
-                        p_komunikat.innerHTML = "";
-                        console.log("d");
-                    }
-                }
-            }
-            czy_wolne();
-            document.querySelectorAll('input[type="date"]')[0].addEventListener("change", czy_wolne);
-            document.querySelectorAll('input[type="date"]')[1].addEventListener("change", czy_wolne);
-        </script>
+        <script src="javascript/rezerwacja.js"></script>
     </body>
 </html>
