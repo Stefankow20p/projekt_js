@@ -254,10 +254,21 @@ main section:nth-child(2) article:nth-child(2) {
     align-items: center;
     background-color: #c4c4c4;
     overflow: hidden;
+    width: 350px;
 }
 main section:nth-child(2) article:nth-child(2) hr {
     border: 1px solid rgb(99, 140, 255);
     width: 100%;
+}
+main section:nth-child(2) article:nth-child(2) ul:nth-child(1) {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+main section:nth-child(2) article:nth-child(2) ul:nth-child(1) li:nth-child(17) {
+    font-size: 2em;
+    text-shadow: 3px 0px 3px rgb(111, 112, 122);
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 main section:nth-child(2) article:nth-child(2) ul {
     min-width: 50%;
@@ -265,6 +276,7 @@ main section:nth-child(2) article:nth-child(2) ul {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
     padding: 0;
 }
 main section:nth-child(2) article:nth-child(2) li {
@@ -280,4 +292,20 @@ main section:nth-child(2) article:nth-child(2) img {
 }
 main form p {
     color: #f00;
+}
+main section:nth-child(2) form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+main section:nth-child(2) form fieldset {
+    width: 100%;
+}
+main section:nth-child(2) input[type="button"],
+main section:nth-child(2) input[type="submit"] {
+    width: 70%;
+    padding: 10px;
+    margin: 10px;
+    background-color: #46b7c7;
+    box-shadow: 0px 10px 10px 0px rgba(66, 68, 90, 1);
 }
