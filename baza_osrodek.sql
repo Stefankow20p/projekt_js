@@ -15,6 +15,7 @@ CREATE TABLE znizki (
 		id_znizka int AUTO_INCREMENT,
 		dzien date,
 		wartosc float,
+		ilosc_osob int,
 		PRIMARY KEY (id_znizka)
 		);
 		
@@ -56,9 +57,9 @@ INSERT INTO pokoje values (14,2,100);
 INSERT INTO pokoje values (15,2,150);
 INSERT INTO pokoje values (16,2,120);
 
-INSERT INTO znizki(dzien, wartosc) values ("2021-10-16",0.6);
-INSERT INTO znizki(dzien, wartosc) values ("2021-10-17",0.6);
-INSERT INTO znizki(dzien, wartosc) values ("2021-10-02",0.7);
-INSERT INTO znizki(dzien, wartosc) values ("2021-10-03",0.7);
-INSERT INTO znizki(dzien, wartosc) values ("2021-10-09",0.7);
-INSERT INTO znizki(dzien, wartosc) values ("2021-10-10",0.7);
+INSERT INTO znizki(dzien, wartosc ,ilosc_osob) values ("2021-10-16",0.6, 0);
+INSERT INTO znizki(dzien, wartosc ,ilosc_osob) values ("2021-10-17",0.6, 0);
+INSERT INTO znizki(dzien, wartosc ,ilosc_osob) values ("2021-10-02",0.7, 2);
+INSERT INTO znizki(dzien, wartosc ,ilosc_osob) values ("2021-10-03",0.7, 2);
+INSERT INTO znizki(dzien, wartosc ,ilosc_osob) values ("2021-10-09",0.7, 2);
+INSERT INTO znizki(dzien, wartosc ,ilosc_osob) values ("2021-10-10",0.7, 2);
