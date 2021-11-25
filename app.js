@@ -38,8 +38,8 @@ function substract_one_day(data) {
 }
 async function check_if_empty(data1, data2, pokoj) {
     data2 = substract_one_day(data2);
-    const zapytanie = `SELECT * FROM wynajecia WHERE ((${data1} BETWEEN przyjazd AND dzien_przed_wyjazdem) OR (${data2} BETWEEN przyjazd AND dzien_przed_wyjazdem) OR (${data1}< przyjazd AND ${data2}>dzien_przed_wyjazdem)) AND pokoj = ${pokoj}`;
-
+    const zapytanie = `SELECT * FROM wynajecia WHERE (("${data1}" BETWEEN przyjazd AND dzien_przed_wyjazdem) OR ("${data2}" BETWEEN przyjazd AND dzien_przed_wyjazdem) OR ("${data1}" < przyjazd AND "${data2}" >dzien_przed_wyjazdem)) AND pokoj = ${pokoj}`;
+    console.log(zapytanie);
     get_data = () => {
         return new Promise((resolve, reject) => {
             pool_base.query(zapytanie, (error, result) => {
