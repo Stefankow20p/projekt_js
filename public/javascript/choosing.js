@@ -8,15 +8,9 @@ function wypisz_koszt(nr_pokoju) {
     //ustala ilosc dni
     console.log("start");
     nr_pokoju = nr_pokoju - 1;
-    let date1 = document.querySelectorAll('input[type="date"]')[0].value.split("-");
-    console.log(date1);
-    date1 = new Date(date1[2], date1[0] - 1, date1[1]);
-    let date2 = document.querySelectorAll('input[type="date"]')[1].value.split("-");
-    console.log(date2);
-    date2 = new Date(date2[2], date2[0] - 1, date2[1]);
-    console.log(date1);
-    console.log(date2);
-    const ilosc_dni = Math.round((date2 - date1) / (1000 * 60 * 60 * 24 * 365));
+    let date1 = new Date(document.querySelectorAll('input[type="date"]')[0].value);
+    let date2 = new Date(document.querySelectorAll('input[type="date"]')[1].value);
+    const ilosc_dni = Math.floor((date2 - date1) / (1000 * 60 * 60 * 24));
     // sprawdza dodatkowe udogodnienia
     let mnoznik = 0;
     if (udogodnienia[0].checked) {

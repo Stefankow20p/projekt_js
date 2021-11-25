@@ -25,7 +25,7 @@ class Zdjecia {
         this.log_alt();
     }
     change_slide() {
-        console.log(this);
+        //console.log(this);
         this.path.firstChild.src = this.src[this.currentSlide];
         this.path.firstChild.alt = this.alt[this.currentSlide];
         //changes slide
