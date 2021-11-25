@@ -11,12 +11,23 @@ let pool_base = mysql.createPool({
     password: "",
     database: "baza_osrodek",
 });
-
+let connection_base = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "baza_osrodek",
+});
+connection_base.connect((err) => {
+    if (err) throw err;
+    console.log("Connected to database");
+});
 const async = require("async");
 
 app.listen(port, () => console.log(`listening at port ${port}`));
 app.use(express.static("public"));
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 function substract_one_day(data) {
     data = new Date(data);
     data.setDate(data.getDate() - 1);
@@ -58,4 +69,10 @@ app.post("/api/check", async (req, res) => {
     console.log(req.body);
     let results = await check_if_empty(req.body.data1, req.body.data2, req.body.number);
     res.json({ is_empty: results });
+});
+
+app.post("/", function (req, res) {
+    console.log("I got a rezerwacja request");
+    console.log(req.body);
+    res.end();
 });

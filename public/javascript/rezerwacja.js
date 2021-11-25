@@ -4,10 +4,10 @@ async function czy_wolne() {
     const subm = document.querySelectorAll("input")[document.querySelectorAll("input").length - 1]; //przycisk submit
     const p_komunikat = document.querySelectorAll("p")[document.querySelectorAll("p").length - 1]; // komunikat bledu
     if (dates[0].value <= new Date()) {
-        subm.type = "button";
+        subm.removeEventListener("click", send);
         p_komunikat.innerHTML = "Nieprawidłowy zakres dat.";
     } else if (dates[0].value >= dates[1].value) {
-        subm.type = "button";
+        subm.removeEventListener("click", send);
         p_komunikat.innerHTML = "Nieprawidłowy zakres dat.";
     } else {
         let empty = false;
@@ -27,10 +27,10 @@ async function czy_wolne() {
         console.log(results);
         empty = results.is_empty;
         if (empty == false) {
-            subm.type = "button";
+            subm.removeEventListener("click", send);
             p_komunikat.innerHTML = "Domek jest w tym momencie zajęty.";
         } else {
-            subm.type = "submit";
+            subm.addEventListener("click", send);
             p_komunikat.innerHTML = "";
         }
     }
