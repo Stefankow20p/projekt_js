@@ -39,7 +39,6 @@ function substract_one_day(data) {
 async function check_if_empty(data1, data2, pokoj) {
     data2 = substract_one_day(data2);
     const zapytanie = `SELECT * FROM wynajecia WHERE (("${data1}" BETWEEN przyjazd AND dzien_przed_wyjazdem) OR ("${data2}" BETWEEN przyjazd AND dzien_przed_wyjazdem) OR ("${data1}" < przyjazd AND "${data2}" >dzien_przed_wyjazdem)) AND pokoj = ${pokoj}`;
-    console.log(zapytanie);
     get_data = () => {
         return new Promise((resolve, reject) => {
             pool_base.query(zapytanie, (error, result) => {
@@ -145,5 +144,42 @@ app.post("/", async function (req, res) {
         console.log("1 record inserted");
     });
     res.end();
+    console.log("------------");
+});
+
+async function get_znizka(data1, data2, nr_domu) {
+    data2 = substract_one_day(data2);
+    const zapytanie = `SELECT wartosc FROM znizki WHERE (dzien BETWEEN "${data1}" AND "${data2}") AND (znizki.ilosc_osob = 0 OR znizki.ilosc_osob = (SELECT pokoje.ilosc_osob FROM pokoje WHERE id_pokoj = ${nr_domu}))`;
+    get_data = () => {
+        return new Promise((resolve, reject) => {
+            pool_base.query(zapytanie, (error, result) => {
+                if (error) {
+                    return reject(error);
+                }
+                if (result[0] == undefined) {
+                    result = false;
+                }
+                return resolve(result);
+            });
+        });
+    };
+    let znizki = await get_data();
+    return znizki;
+}
+
+app.post("/api/znizka", async (req, res) => {
+    console.log("------------");
+    console.log("I got a discount request");
+    console.log(req.body);
+    let znizka = await get_znizka(req.body.data1, req.body.data2, req.body.number);
+    console.log(znizka);
+    let znizka_suma = 0;
+    if (znizka != false) {
+        znizka.forEach((element) => {
+            znizka_suma += element.wartosc * ceny[req.body.number - 1];
+        });
+    }
+
+    res.json({ znizka: znizka_suma });
     console.log("------------");
 });

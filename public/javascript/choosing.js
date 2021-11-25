@@ -4,7 +4,7 @@ const udogodnienia = document.querySelector("main").querySelector("section:nth-c
 const liczba_os = [4, 2, 6, 4, 4, 2, 5, 8, 8, 2, 2, 2, 2, 2, 2, 2];
 const ceny = [170, 100, 300, 200, 190, 120, 300, 350, 350, 50, 50, 70, 70, 100, 150, 120];
 
-function wypisz_koszt(nr_pokoju) {
+async function wypisz_koszt(nr_pokoju) {
     //ustala ilosc dni
     console.log("start");
     nr_pokoju = nr_pokoju - 1;
@@ -28,12 +28,30 @@ function wypisz_koszt(nr_pokoju) {
     if (udogodnienia[4].checked) {
         mnoznik += 25 * liczba_os[nr_pokoju];
     }
-    console.log(mnoznik);
-    console.log(nr_pokoju);
-    console.log(ilosc_dni);
-
-    document.querySelector("main").querySelector("form").querySelectorAll("li")[1].innerHTML = mnoznik * ilosc_dni + ceny[nr_pokoju] * ilosc_dni;
-    console.log("f");
+    let znizka = 0;
+    let data1 = document.querySelector("main").querySelectorAll('input[type="date"]')[0].value;
+    let data2 = document.querySelector("main").querySelectorAll('input[type="date"]')[1].value;
+    let number = document.querySelector("main").querySelector('input[type="hidden"]').value;
+    const data = { data1, data2, number };
+    const options = {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    };
+    const res = await fetch("api/znizka", options);
+    const results = await res.json();
+    console.log(results.znizka);
+    if (results.znizka > 0) {
+        znizka = results.znizka;
+    }
+    if (znizka == 0) {
+        document.querySelector("main").querySelector("form").querySelectorAll("li")[1].innerHTML = mnoznik * ilosc_dni + ceny[nr_pokoju] * ilosc_dni;
+    } else {
+        document.querySelector("main").querySelector("form").querySelectorAll("li")[1].innerHTML =
+            "<s>" + (mnoznik * ilosc_dni + ceny[nr_pokoju] * ilosc_dni) + "</s>  " + (mnoznik * ilosc_dni + ceny[nr_pokoju] * ilosc_dni - znizka);
+    }
 }
 
 function change_value(item) {
