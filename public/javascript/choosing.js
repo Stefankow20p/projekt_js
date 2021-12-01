@@ -6,7 +6,6 @@ const ceny = [170, 100, 300, 200, 190, 120, 300, 350, 350, 50, 50, 70, 70, 100, 
 
 async function wypisz_koszt(nr_pokoju) {
     //ustala ilosc dni
-    console.log("start");
     nr_pokoju = nr_pokoju - 1;
     let date1 = new Date(document.querySelectorAll('input[type="date"]')[0].value);
     let date2 = new Date(document.querySelectorAll('input[type="date"]')[1].value);
@@ -42,7 +41,6 @@ async function wypisz_koszt(nr_pokoju) {
     };
     const res = await fetch("api/znizka", options);
     const results = await res.json();
-    console.log(results.znizka);
     if (results.znizka > 0) {
         znizka = results.znizka;
     }

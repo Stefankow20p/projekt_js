@@ -24,7 +24,6 @@ async function czy_wolne() {
         };
         const res = await fetch("api/check", options);
         const results = await res.json();
-        console.log(results);
         empty = results.is_empty;
         if (empty == false) {
             subm.removeEventListener("click", send);
