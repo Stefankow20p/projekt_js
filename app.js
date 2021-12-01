@@ -2,20 +2,20 @@ console.log("server runs");
 
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3000;
-
+const port = process.env.PORT || 3000; //3306
+//serv remotemysql.com
 const mysql = require("mysql");
 let pool_base = mysql.createPool({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "baza_osrodek",
+    host: "remotemysql.com",
+    user: "JaHhY3RSru",
+    password: "oAhskDzOzB",
+    database: "JaHhY3RSru",
 });
 let connection_base = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "baza_osrodek",
+    host: "remotemysql.com",
+    user: "JaHhY3RSru",
+    password: "oAhskDzOzB",
+    database: "JaHhY3RSru",
 });
 connection_base.connect((err) => {
     if (err) throw err;
