@@ -1,4 +1,6 @@
 function send() {
+    const p_komunikat = document.querySelectorAll("p")[document.querySelectorAll("p").length - 1]; // komunikat bledu
+    const subm = document.querySelectorAll("input")[document.querySelectorAll("input").length - 1]; //przycisk submit
     fetch("/", {
         method: "POST",
         headers: {
@@ -17,5 +19,7 @@ function send() {
             },
         }),
     });
+    subm.removeEventListener("click", send);
+    p_komunikat.innerHTML = "Nie można dokonać tej samej rezerwacji dwukrotnie.";
     document.location = "zaplacono.html";
 }
