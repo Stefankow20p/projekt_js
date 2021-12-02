@@ -1,24 +1,25 @@
 {
-  "name": "projekt_js",
-  "version": "1.0.0",
-  "description": "<h1>Strona internetowa ośrodka wypoczynkowego</h1>\r Możliwość rezerwacji noclegu\r Informacje o dodatkowych usługach które świadczy hotel, możliwość ich zamówienia\r Podstrona zawierająca informacje o eventach odbywających się na terenie ośrodka\r interaktywna mapa ośrodka",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Stefankow20p/projekt_js.git"
-  },
-  "author": "Piotr Stefankow",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Stefankow20p/projekt_js/issues"
-  },
-  "homepage": "https://github.com/Stefankow20p/projekt_js#readme",
-  "dependencies": {
-    "async": "^3.2.2",
-    "express": "^4.17.1",
-    "mysql": "^2.18.1"
-  }
+    "name": "projekt_js",
+    "version": "1.0.0",
+    "description": "<h1>Strona internetowa ośrodka wypoczynkowego</h1>\r Możliwość rezerwacji noclegu\r Informacje o dodatkowych usługach które świadczy hotel, możliwość ich zamówienia\r Podstrona zawierająca informacje o eventach odbywających się na terenie ośrodka\r interaktywna mapa ośrodka",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Stefankow20p/projekt_js.git"
+    },
+    "author": "Piotr Stefankow",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Stefankow20p/projekt_js/issues"
+    },
+    "homepage": "https://github.com/Stefankow20p/projekt_js#readme",
+    "dependencies": {
+        "async": "^3.2.2",
+        "express": "^4.17.1",
+        "mysql": "^2.18.1"
+    }
 }
