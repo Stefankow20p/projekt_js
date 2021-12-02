@@ -1,6 +1,6 @@
 <h1>Strona internetowa ośrodka wypoczynkowego</h1>
 link: https://osrodek.herokuapp.com/
-Cel:
+Cel: nauczenie się łączenia bazy danych ze stroną internetową
 
 Użyte technologie:
 - node js
@@ -12,8 +12,15 @@ Nauczone:
 
 Strona główna:
 - możliwość sprawdzenia aktualnie dziejących się wydarzeń na stronie ośrodka
-- informacje o zniżkach np.
+- informacje o zniżkach
 
-Możliwość zarezerwowania noclegu, wybrania dodatkowych udogodnienień.
-Zniżki (np. 16-17.10.2021).
-Baza danych w której zapisywane są rezerwacje.
+Mapa:
+- pozwala dwiedzieć się o znajdujących się na terenie ośrodkach udogodnieniach
+
+Rezerwacje:
+- pozwala zarezerwować domek
+- wybieranie domku poprzez kliknięcie na mapę
+- wybranie daty przyjazdu i wyjazdu
+- możliwość dodokupienia dodatkowych usług jak np. dostęp do internetu
+- jeśli na wybrany okres czasu dostępna jest zniżka cena zostanie przekreślona, obok niej wypisana poprawna
+- rezerwacja zostanie zapisana w bazie danych
